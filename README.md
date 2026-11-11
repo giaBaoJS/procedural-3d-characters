@@ -1,13 +1,14 @@
 # Procedural 3D characters in Three.js
 
-Two rigged, animated characters with full effect layers, built entirely in TypeScript.
-No `.glb`, no `.fbx`, no texture files, no loaders — the geometry, the skeletons, every
-animation keyframe and every particle is generated in code at runtime.
+Three characters are built entirely in TypeScript: two are rigged and animated, and one
+is presented in a static A-pose. No `.glb`, `.fbx`, texture files, or loaders — geometry
+and animation data are generated in code at runtime.
 
 | | | |
 | --- | --- | --- |
 | **Mochi** (`/`) | a cute mascot | 9 clips, sparkles, paw trails, shockwaves |
 | **Vector** (`/hunter.html`) | an armoured hunter | 10 clips, keyboard locomotion, 8 effect systems |
+| **Mech Girl** (`/mech-girl.html`) | an anime-inspired mech schoolgirl | cel shading, generated geometry, A-pose |
 
 Vector is an original design in the visual idiom of 90s armoured-hero action games, not a
 reproduction of any existing character.
@@ -32,6 +33,7 @@ npm run build
 | Mascot clips | `src/animation/clips.ts` | Nine hand-authored clips |
 | Mascot effects | `src/vfx/index.ts` | Sparkles, speed-driven paw trails, gravity shrapnel, shockwaves |
 | Hunter rig | `src/character/hunter.ts` | 84 armour parts on a 20-joint skeleton, open-fronted helmet shell |
+| Mech-girl model | `src/character/mechGirl.ts` | Procedural toon-shaded character with uniform, armor, and angular hair |
 | Hunter clips | `src/animation/hunterClips.ts` | Locomotion set plus **additive** combat layers |
 | Hunter effects | `src/vfx/hunterFx.ts` | Particle pool, dash afterimages, charge orb, plasma shots, rings, sabre |
 | Locomotion | `src/hunter/locomotion.ts` | Input, physics, facing, and the animation state machine |
